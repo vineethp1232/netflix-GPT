@@ -4,7 +4,7 @@ import VideoBackground from './VideoBackground'
 import { useSelector } from 'react-redux'
 
 const MainContainer = () => {
-
+  const trailerVideo = useSelector((store) => store.movies.trailerVideo);
     const movies=useSelector(store=>store.movies?.nowPlaying)
     if(!movies) return;
     const mainMovie=movies[16];
@@ -12,7 +12,9 @@ const {original_title,overview,id}=mainMovie
   return (
     <div>
       <VideoTitle title={original_title} overview={overview} />
-      <VideoBackground id={id} />
+      <div className='w-screen aspect-video'>
+      <VideoBackground id={id} trailerVideo={trailerVideo}/>
+      </div>
     </div>
   )
 }
