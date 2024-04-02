@@ -6,8 +6,11 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-    
+      Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
     }
   };
 
   export const MOVIE_POSTER_URL="https://image.tmdb.org/t/p/w500/"
+
+  export const LANGUAGES = [{lang:"English",identifier:"en",placeHolder:"What do you want to watch?",button:"search"},{lang:"Hindi",identifier:"hindi",placeHolder:"आप क्या देखना चाहते हैं?",button:"खोज"},{lang:"spanish",identifier:"esp",placeHolder:"¿Qué quieres ver?",button:"Buscar"}]
+  export const OPENAI_API_KEY =process.env.REACT_APP_OPENAI_KEY
