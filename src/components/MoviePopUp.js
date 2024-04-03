@@ -44,7 +44,7 @@ const MoviePopup = () => {
           close
         </button>
       </div>
-    ):<div className="bg-gray-800 text-white aspect-video text-center"> <h1 className="absolute left-48 top-1/2">Trailer not available</h1> 
+    ):<div className="bg-black bg-opacity-80 text-white aspect-video text-center"> <h1 className="absolute left-48 top-1/2"></h1> 
      <button
           className="bg-black border border-white absolute top-2 px-6 rounded-sm right-2 bg-opacity-80"
           onClick={() => {
