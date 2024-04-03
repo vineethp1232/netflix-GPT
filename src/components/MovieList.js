@@ -6,7 +6,7 @@ const MovieList = ({ movies, title }) => {
 
   return (
     <div className="pl-4 my-2 ">
-      <h1 className="pl-2 py-2 text-xl">{title}</h1>
+      <h1 className="pl-2 py-2 text-lg md:text-xl">{title}</h1>
       <div className="flex overflow-x-auto scroll-hide ">
         
           {movies &&

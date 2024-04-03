@@ -27,7 +27,7 @@ const Browse = () => {
       <MainContainer/>
       <SecondaryContainer/>
       </>}
-      {moviePopup && <div className='w-[40%] aspect-video fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-50 text-white'><MoviePopup/></div>}
+      {moviePopup && <div className='w-full md:w-[40%] aspect-video fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-50 text-white'><MoviePopup/></div>}
       
     </div>
   )

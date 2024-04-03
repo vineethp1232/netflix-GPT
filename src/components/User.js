@@ -16,7 +16,7 @@ const handleClick=()=>{
 }
    
   return (
-    <div className='absolute right-1 top-10 bg-black bg-opacity-80 w-56 p-4 rounded-sm my-4'>
+    <div className='absolute right-1 top-24 md:top-10 bg-black bg-opacity-80 w-56 p-4 rounded-sm my-4 z-30'>
      <div className='flex my-2'>
       <img alt="user" className=""  src={USER_USER_AVATAR}/>
       <h2 className='px-4'>{user?.displayName}</h2>

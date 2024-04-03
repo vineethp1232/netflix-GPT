@@ -12,10 +12,10 @@ const SearchResults = () => {
     
   return (
     <div>
-        <div className='bg-black bg-opacity-80 text-white py-20'>
+        <div className='bg-black bg-opacity-80 text-white py-10 md:py-24 '>
          <MovieList movies={movies} title={"Results"} />
          </div>
-         <img src={BACKGROUND_IMG} className='absolute -z-20 top-0 '></img>
+         <img src={BACKGROUND_IMG} className='absolute -z-20 top-0 h-screen object-cover md:h-auto'></img>
     </div>
   )
 }

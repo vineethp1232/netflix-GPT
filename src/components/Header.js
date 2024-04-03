@@ -67,11 +67,11 @@ const Header = () => {
   
   }
   return (
-    <div className="bg-gradient-to-b from-black px-8 py-2 absolute z-20 w-screen flex justify-between text-white">
-      <img className=" w-48 cursor-pointer" src={HEADER_NETFLIX_LOGO} alt="logo" onClick={getHome}/>
+    <div className="bg-gradient-to-b from-black px-8 py-4 md:py-2 pb-16 md:pb-0 md:absolute z-20 w-full flex flex-col md:flex-row justify-between text-white bg-black md:bg-transparent">
+      <img className=" w-32 md:w-48 cursor-pointer" src={HEADER_NETFLIX_LOGO} alt="logo" onClick={getHome}/>
       {user && (
         <button
-          className=" bg-black rounded-md px-6 py-0 border border-white h-8 relative left-72 top-4 hover:bg-gray-900"
+          className=" bg-black rounded-md  px-0 w-28 md:w-auto md:px-6 py-0 border border-white h-8 relative left-36 md:-left-36 -top-2 md:top-6 hover:bg-gray-900"
           onClick={toggleGpt}
         >
           {isGpt ? "Home" : "Gpt Search"}
@@ -80,7 +80,7 @@ const Header = () => {
       {isGpt && (
         <form>
           <select
-            className="bg-black border border-white text-white h-8 rounded-md relative top-4 left-12 px-3 cursor-pointer"
+            className="bg-black border border-white text-white h-8 rounded-md relative top-6 right-48 px-3 cursor-pointer"
             ref={langRef}
             onChange={changeLang}
             value={selectedLang}
@@ -93,12 +93,12 @@ const Header = () => {
       )}
       {user && !isGpt && (
         <form
-          className="absolute top-7 left-72"
+          className="absolute top-28 md:top-8 md:left-80"
           onSubmit={(e) => e.preventDefault()}
         >
           <input
             type="text"
-            className="w-72 rounded-l-md  h-8 border border-white bg-black  bg-opacity-65 p-2 "
+            className="w-60  md:w-72 rounded-l-md  h-8 border border-white bg-black  bg-opacity-65 p-2 "
             ref={search}
           />
           <button className="border border-white py-1 px-4 bg-black rounded-r-md" onClick={searchMovie}>
@@ -107,9 +107,9 @@ const Header = () => {
         </form>
       )}
       {user && (
-        <div className="flex justify-between py-4 ">
+        <div className="flex md:justify-between py-4 absolute right-1 top-12 md:top-4">
           <img
-            className="h-8"
+            className="h-6 md:h-8"
             alt="user"
             src="https://occ-0-6058-3663.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
           />

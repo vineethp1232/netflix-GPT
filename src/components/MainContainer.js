@@ -12,7 +12,7 @@ const {original_title,overview,id}=mainMovie
   return (
     <div>
       <VideoTitle title={original_title} overview={overview} />
-      <div className='w-screen aspect-video'>
+      <div className='w-full aspect-video'>
       <VideoBackground id={id} trailerVideo={trailerVideo}/>
       </div>
     </div>

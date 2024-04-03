@@ -19,15 +19,15 @@ const GptSearch = () => {
     }
   return (
     <div>
-      <img src={BACKGROUND_IMG} />
-      <form onSubmit={e=>e.preventDefault()}className="absolute left-72 top-32 z-20  bg-black bg-opacity-80 p-2 w-1/2 grid grid-cols-12 rounded-sm">
+      <img src={BACKGROUND_IMG} className="h-screen md:h-auto object-cover"/>
+      <form onSubmit={e=>e.preventDefault()}className="absolute left-2 md:left-72 top-32 z-20  bg-black bg-opacity-80 p-2 w-full md:w-1/2 grid grid-cols-12 rounded-sm">
         <input
           type="text"
           ref={searchQuery}
-          className=" bg-black border border-white h-10  col-span-10 rounded-md mx-4 text-white p-2"
+          className=" bg-black border border-white h-10 col-span-9 md:col-span-10 rounded-md mx-2 md:mx-4 text-white p-2 "
           placeholder={language[0].placeHolder}
         />
-        <button className="text-white bg-red-800 h-10 rounded-lg px-4 col-span-2" onClick={handleClick}>
+        <button className="text-white bg-red-800 h-10 rounded-lg px-2 md:px-4 col-span-2 md:col-span-2" onClick={handleClick}>
           {language[0].button}
         </button>
       </form>

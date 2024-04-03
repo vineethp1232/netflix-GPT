@@ -27,11 +27,11 @@ const MoviePopup = () => {
           allowFullScreen
         ></iframe>
 
-        <div className="flex pt-4 absolute top-48 left-5">
-          <button className="bg-white text-black rounded-md px-6 py-2 hover:bg-opacity-80 mr-2" onClick={()=>{alert("Subscribe to watch")}}>
+        <div className="flex pt-4 absolute top-36 md:top-48 left-5">
+          <button className="bg-white text-black rounded-md px-4 md:px-6 py-1 md:py-2 hover:bg-opacity-80 mr-2" onClick={()=>{alert("Subscribe to watch")}}>
             Play
           </button>
-          <button className="bg-gray-500 text-white rounded-md px-6 py-2 bg-opacity-60 hover:bg-opacity-20">
+          <button className="bg-gray-500 text-white rounded-md px-4 md:px-6 py-1 md:py-2 bg-opacity-60 hover:bg-opacity-20">
             More Info
           </button>
         </div>

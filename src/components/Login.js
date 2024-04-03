@@ -65,7 +65,7 @@ const nameRef=useRef(null)
   return (
     <div className="text-white">
       <Header />
-      <form onSubmit={e=>e.preventDefault()} className="absolute w-3/12 bg-black bg-opacity-70 py-7 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-normal px-6">
+      <form onSubmit={e=>e.preventDefault()} className="absolute w-full md:w-3/12 bg-black bg-opacity-70 py-7 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-normal px-6">
         <h1 className="font-bold text-3xl my-5">
           {isSignIn ? "Sign In" : "Sign Up"}
         </h1>
@@ -104,7 +104,7 @@ const nameRef=useRef(null)
       </form>
 
       <div>
-        <img
+        <img className="h-screen md:h-auto object-cover"
           src={BACKGROUND_IMG}
           alt="background"
         />
