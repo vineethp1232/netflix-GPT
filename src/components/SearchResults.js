@@ -9,7 +9,7 @@ const SearchResults = () => {
     const search=useSelector(store=>store.movies.searchText)
     useSearchMovie(search);
     const movies=useSelector(store=>store.movies.searchResults)
-    console.log(movies)
+    
   return (
     <div>
         <div className='bg-black bg-opacity-80 text-white py-20'>

@@ -28,7 +28,7 @@ const MoviePopup = () => {
         ></iframe>
 
         <div className="flex pt-4 absolute top-48 left-5">
-          <button className="bg-white text-black rounded-md px-6 py-2 hover:bg-opacity-80 mr-2">
+          <button className="bg-white text-black rounded-md px-6 py-2 hover:bg-opacity-80 mr-2" onClick={()=>{alert("Subscribe to watch")}}>
             Play
           </button>
           <button className="bg-gray-500 text-white rounded-md px-6 py-2 bg-opacity-60 hover:bg-opacity-20">

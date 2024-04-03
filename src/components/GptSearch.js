@@ -14,7 +14,7 @@ const GptSearch = () => {
         messages: [{ role: 'user', content:aiSearch  }],
         model: 'gpt-3.5-turbo',
       });
-      console.log(movieNames.choices)
+      
       
     }
   return (

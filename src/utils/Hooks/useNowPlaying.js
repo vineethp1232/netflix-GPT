@@ -9,7 +9,6 @@ const nowPlaying=useSelector(store=>store.movies.nowPlaying)
   const generateNowPlaying=async ()=>{
     const data= await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', API_OPTIONS)
     const res=await data.json()
-    console.log(res)
     dispatch(addnowPlaying(res.results))
     
   }

@@ -5,10 +5,10 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { addItem, removeItem } from "../utils/Redux/userSlice";
 import { useNavigate } from "react-router-dom";
-import { HEADER_USER_AVATAR } from "../utils/constants";
+import { HEADER_NETFLIX_LOGO, HEADER_USER_AVATAR } from "../utils/constants";
 import { changeLanguage, gptSearch } from "../utils/Redux/configSlice";
 import { LANGUAGES } from "../utils/constants";
-import { addSearch, toggleMoviePopup } from "../utils/Redux/movieSlice";
+import { addPopupTrailer, addSearch, toggleMoviePopup } from "../utils/Redux/movieSlice";
 const Header = () => {
   const [isUserTab, setIsUserTab] = useState(false);
   const dispatch = useDispatch();
@@ -45,6 +45,9 @@ const Header = () => {
   const toggleGpt = () => {
     dispatch(gptSearch());
     isGpt ? navigate("/browse") : navigate("/gptSearch");
+    dispatch(toggleMoviePopup({isPopup:false,id:null}))
+    dispatch(addSearch(null))
+    dispatch(addPopupTrailer(null))
   };
 
   const changeLang = () => {
@@ -54,14 +57,18 @@ const Header = () => {
     dispatch(addSearch(search.current.value))
     dispatch(toggleMoviePopup({isPopup:false,id:null}))
     navigate("/searchResults")
+    dispatch(addPopupTrailer(null))
   }
   const getHome =()=>{
     navigate("/browse")
     dispatch(addSearch(null))
+    dispatch(toggleMoviePopup({isPopup:false,id:null}))
+    dispatch(addPopupTrailer(null))
+  
   }
   return (
     <div className="bg-gradient-to-b from-black px-8 py-2 absolute z-20 w-screen flex justify-between text-white">
-      <img className=" w-48 " src={HEADER_USER_AVATAR} alt="logo" onClick={getHome}/>
+      <img className=" w-48 cursor-pointer" src={HEADER_NETFLIX_LOGO} alt="logo" onClick={getHome}/>
       {user && (
         <button
           className=" bg-black rounded-md px-6 py-0 border border-white h-8 relative left-72 top-4 hover:bg-gray-900"
