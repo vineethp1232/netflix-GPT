@@ -5,7 +5,7 @@ import { auth } from "../utils/firebase";
 import { signInWithEmailAndPassword,createUserWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/Redux/userSlice";
-import { BACKGROUND_IMG } from "../utils/constants";
+import { BACKGROUND_IMG, HEADER_NETFLIX_LOGO } from "../utils/constants";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -64,7 +64,12 @@ const nameRef=useRef(null)
   }
   return (
     <div className="text-white">
+      <div className="hidden md:block">
       <Header />
+      </div>
+      <div className=" md:hidden relative  flex  justify-center top-4 bg-black bg-opacity-50">
+     <img src={HEADER_NETFLIX_LOGO} alt="logo" className=" w-40 shadow-2xl "/>
+     </div>
       <form onSubmit={e=>e.preventDefault()} className="absolute w-full md:w-3/12 bg-black bg-opacity-70 py-7 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-normal px-6">
         <h1 className="font-bold text-3xl my-5">
           {isSignIn ? "Sign In" : "Sign Up"}
@@ -104,7 +109,7 @@ const nameRef=useRef(null)
       </form>
 
       <div>
-        <img className="h-screen md:h-auto object-cover"
+        <img className="h-screen md:h-auto object-cover -mt-16 md:mt-auto "
           src={BACKGROUND_IMG}
           alt="background"
         />
